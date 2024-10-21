@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- action="/submit" -->
+    <form onsubmit="formsubmit()" action="/submit">
+        <input placeholder="password" id="pass" type="password">
+        <input placeholder="re enter passs" id="conf" type="password">
+        <button>submit</button>
+    </form>
+
+
+
+    <script>
+        let form = document.querySelector("form")
+        let input = document.querySelector("input")
+
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault()
+            let data = input.value;
+            alert(data)
+        })
+
+
+
+        //VALIDATION PROGRA
+        
+        function formsubmit(){
+            const passInput = document.getElementById("pass").value
+            const confInput = document.getElementById("conf").value
+            if(passInput === confInput){
+                alert("submitted")
+            }
+            else{
+                alert("over")
+            }
+        }
+
+    </script>
+</body>
+</html>

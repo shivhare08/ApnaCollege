@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 350px;
+            height: 200px;
+            background-color: aqua;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        button{
+            margin: 0 auto;
+        }
+        
+
+        .changing:hover{
+            border-radius: 50%;
+            border: 2px solid rgb(148, 67, 67);
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <div>
+        <button>click to change the color</button>
+    </div>
+
+    <script>
+        let colors = ["red" , "green" , "blue", "orange" , "black" ,"white"]
+        const btn = document.querySelector("button");
+        const div = document.querySelector("div");
+        const h1 = document.querySelector("h1");
+        
+     
+        setInterval(function(){
+            let random = Math.floor(Math.random()*colors.length)
+            div.style.backgroundColor = colors[random]
+            h1.innerHTML = colors[random]
+            div.style.transition = "0.5s"
+            div.setAttribute("class","changing")
+        },1000);
+        // btn.addEventListener("click",()=>{
+        //     // let random = Math.floor(Math.random()*colors.length)
+        //     // div.style.backgroundColor = colors[random]
+            
+        // })
+    </script>
+</body>
+</html>

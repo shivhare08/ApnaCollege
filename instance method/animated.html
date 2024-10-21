@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            position: absolute;
+            top: 10rem;
+        }
+        div h3{
+            /* background-color: white; */
+            color: rgb(255, 255, 255);
+            padding: 0.8rem;
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .style-things{
+            transform: scale(2);
+            transition: 1s;
+            transition-delay: 1.8s;
+            letter-spacing: 2px;
+            /* text-decoration:0.2px white underline; */
+            /* background-color: rgba(14, 157, 228, 0.251); */
+        }
+
+/*         
+        p{
+            color: rgb(255, 255, 255);
+            padding: 0.8rem;
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+            transition-delay: 3s;
+            transition: 2s;
+            transform: scale(3);
+        } */
+    </style>
+</head>
+<body>
+    <div class="newspaper">
+        <h3>Hlo this is a animated <br>design or event</h3>
+        <p></p>
+    </div>
+
+    <script>
+        const p = document.querySelector("p");
+        //animate(keyframes,options)
+        const newspaperSpinning = [
+            {transform : "rotate(0) scale(1)"},
+            {transform : "rotate(360deg) scale(2)"}
+        ]
+
+        const newspaperTiming = {
+            duration : 2000,
+            iterations : 1
+        }
+        const div = document.querySelector(".newspaper");
+
+        div.addEventListener("click",()=>{
+            div.animate(newspaperSpinning , newspaperTiming);
+
+
+            div.setAttribute("class","style-things")
+            p.innerHTML = "i'm shashank"
+
+            //div.classList.add("scale-3")
+        })
+
+        // const h3 = document.querySelector("h3");
+
+        // div.addEventListener("click",()=>{
+        //     h3.style.transition = "4s"
+        //     h3.style.transform = "rotate(720deg) "
+        //     h3.style.transform = "scale(0)"
+        // })
+    </script>
+</body>
+</html>

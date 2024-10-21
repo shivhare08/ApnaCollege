@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="this.innerHTML = 'HFF'">click me bro</button>
+    <button onclick="clickme()">click bro</button>
+    <div class="ok"></div>
+    <script>
+        let div = document.querySelector("div")
+        
+        function clickme(){
+            const element = document.createElement("h4");
+
+            element.innerHTML = "ok bhai ok"
+            div.append(element);
+        }
+    </script>
+</body>
+</html>

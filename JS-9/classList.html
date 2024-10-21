@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green{
+            color: rgb(81, 210, 16);
+        }
+
+        .blue{
+            color: rgba(1, 25, 242, 0.695);
+        }
+    </style>
+</head>
+<body>
+    <h2>hlo how are you</h2>
+    <script>
+        const h2 = document.querySelector("h2")
+        // h2.classList.add("ravi");
+        // console.log(h2.classList);
+        // h2.setAttribute("class","green")
+
+        //yha pr green ek defined class h upr
+        h2.classList.add("green")
+
+        //isne remove krdia class ko
+        h2.classList.remove()
+
+        h2.classList.add("blue")
+        //jo h htayega ni h lagayega
+        h2.classList.toggle("blue");
+
+        h2.classList.toggle("green");
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">click me</button>
+    <input type="text" placeholder="something">
+    <h3></h3>
+    <script>
+        const btn = document.querySelector(".btn");
+        const h3 = document.querySelector("h3");
+
+        let input = document.querySelector("input")
+
+        window.addEventListener("keyup",(e)=>{
+            console.log(e.key); 
+            console.log(e.code);
+            
+        })
+
+        // window.addEventListener("keydown",(e)=>{
+        //     console.log(e.key); 
+        // })
+
+
+        // window.addEventListener("mouseover",()=>{
+        //     console.log(Math.random());
+            
+        // })
+        // btn.addEventListener("keydown",(event)=>{
+        //     console.log(event);
+            
+        // // const element = document.createElement("h1");
+     
+        // // h3.innerHTML = "fuck you"
+        // })
+    </script>
+</body>
+</html>

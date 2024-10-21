@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    </div>
+    
+    <Script>
+        //after() se we can set theposition of the element
+        const div = document.querySelector("div");
+
+        const span = document.createElement("span")
+
+        div.appendChild(span);
+        console.log(div.outerHTML);
+        const p = document.createElement("p");
+        // span.after(p)
+        span.before(p)
+        console.log(div.outerHTML);
+
+
+    </Script>
+</body>
+</html>

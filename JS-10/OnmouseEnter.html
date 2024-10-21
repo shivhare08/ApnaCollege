@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .random{
+            font-size: 60px;
+            transition-duration: 2s;
+        }
+
+        .image{
+            background-image: url("https://cdn.britannica.com/63/211663-050-A674D74C/Jonny-Bairstow-batting-semifinal-match-England-Australia-2019.jpg");
+            width: 100%;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            transition: 2s;
+        }
+
+        .x{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="x">
+        <ul>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+            <li>home</li>
+        </ul>
+    </div>
+    <!-- <button onmouseenter="clickme()">Lets change me bro</button> -->
+    <button onmouseenter="clickme()">Lets change me bro</button>
+    <button onclick="nextLevel()">bro click me too</button>
+    <button onmouseenter="addimage()">image</button>
+    <button onmouseenter="content()">content</button>
+    <h3></h3>
+    <div></div>
+    <script>
+        const btn = document.querySelector("button")
+        function clickme(){
+            btn.innerHTML = "dekh bhai changes"
+            // btn.style.backgroundColor = "blue"
+            btn.setAttribute("style","transform:scale(2);")
+            btn.style.color = "white";
+        }
+        const h3 = document.querySelector('h3');
+        function nextLevel(){
+            h3.innerHTML = "or bhai sab thik";
+            //yha pr upr jo random class h vo add hogyi
+            h3.classList.add("random");
+            
+        }
+        setTimeout(function next(){
+            h3.style.fontSize = "40px"
+            
+            h3.style.transition = "2s"
+            h3.style.textDecoration = "black underline"
+            h3.classList.remove("random")
+        },2000);
+        
+        const div = document.querySelector("div");
+        function addimage(){
+            div.setAttribute("class","image")
+            div.style.transition = "1s"
+        }
+
+        const div2 = document.querySelector("x");
+        function content(){
+            div2.setAttribute("style","display:block;")
+        }
+    </script>
+</body>
+</html>
